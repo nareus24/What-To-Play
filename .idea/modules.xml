@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../SPTTRPG/.idea/SPTTRPG.iml" filepath="$PROJECT_DIR$/../SPTTRPG/.idea/SPTTRPG.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../pitchVisual/.idea/pitchVisual.iml" filepath="$PROJECT_DIR$/../pitchVisual/.idea/pitchVisual.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/whatToPlay.iml" filepath="$PROJECT_DIR$/.idea/whatToPlay.iml" />
     </modules>
   </component>

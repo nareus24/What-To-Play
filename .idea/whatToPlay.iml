@@ -6,7 +6,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="pitchVisual" />
-    <orderEntry type="module" module-name="SPTTRPG" />
   </component>
 </module>

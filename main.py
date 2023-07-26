@@ -35,8 +35,7 @@ class WhatToPlay(tk.Tk):
                               bg=color_main, fg=color_text)
         self.main_label.pack()
 
-        self.game_label = tk.Label(self, text="Add games through the \n"
-                                              "'Edit Games button.\n", bg=color_main, fg=color_text, font=("", 28))
+        self.game_label = tk.Label(self, text="", bg=color_main, fg=color_text, font=("", 28))
         self.game_label.pack()
 
         self.random_game_button = tk.Button(self, text="Random Game", bg=color_secondary, fg=color_text,
@@ -53,10 +52,14 @@ class WhatToPlay(tk.Tk):
 
     # Button commands
     def random_game_button_pressed(self):
-        with open('games.txt') as f:
-            lines = f.readlines()
-            random_line = random.choice(lines) if lines else None
-            self.game_label.configure(text=f"{random_line} \n")
+        with open('games.txt', 'r') as f:
+            lines = [line.strip() for line in f if line.strip()]
+            if lines:
+                random_line = random.choice(lines)
+                self.game_label.configure(text=f"{random_line}\n")
+            else:
+                self.game_label.configure(text="Add games by clicking \n"
+                                               "the 'Edit Games' button.\n")
 
     def edit_games_popup(self):
         edit_games_popup = tk.Toplevel()
